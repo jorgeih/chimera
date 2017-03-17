@@ -1,9 +1,3 @@
-### []{#Modelling_a_Case_0}Modelling a Case
-
-See [the Gryphon
-documentation](https://bpt.hpi.uni-potsdam.de/Gryphon/GettingStarted)
-for information on how to model fragment based cases.
-
 ### []{#Executing_a_Case_4}Executing a Case
 
 Once a case has been exported to a Chimera instance, it can be found in
