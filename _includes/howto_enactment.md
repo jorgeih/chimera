@@ -1,4 +1,6 @@
-### []{#Executing_a_Case_4}Executing a Case
+# Howtos
+
+## Executing a Case
 
 Once a case has been exported to a Chimera instance, it can be found in
 the Chimera sidebar under “Scenarios”. There it can be selected for
@@ -12,7 +14,10 @@ a new case will be created independent of the user input. Alternatively,
 a new case can always be started manually (although the data conditions
 from the start condition may not be fulfilled).
 
-Your browser does not support HTML video.
+<video width="550" autoplay loop muted>
+    <source src="{{ site.github.url }}/vid/start_new_case.webm" type="video/webm">
+    Your browser does not support HTML video.
+</video>
 
 Once a case has been started, all enabled tasks can be seen in the
 “Unassigned Tasks” panel. From there, a task can be selected in order to
@@ -51,14 +56,14 @@ current state of the case:
 -   On the bottom of the page, all fragment models are displayed in
     order to provide an overview of the case steps.
 
-#### []{#Execution_Screencast_29}Execution Screencast
+#### Execution Screencast
 
 A full screencast can be found
 [here](https://bpt.hpi.uni-potsdam.de/Chimera/WebHome).
 
-[]{#Automatic_Tasks_0}Automatic Tasks
+## Automatic Tasks
 
-##### []{#Webservice_Tasks_1}Webservice Tasks
+##### Webservice Tasks
 
 Webservice tasks are modelled using the BPMN Service Task. In the
 [bpmn.io](http://bpmn.io) editor of Gryphon, you can define the
@@ -67,14 +72,10 @@ task, you can provide a webservice URL and a method (GET, POST, PUT or
 DELETE). In the case of POST and PUT, you can also specify an HTTP body
 with data that will be transmitted in the call.
 
-Example:\
-Webservice to call (URL):
-`http://api.openweathermap.org/data/2.5/weather?q=Potsdam&APPID=d0b8dcaef9210ab1d713f44a3bcf589c`\
-Webservice to call (HTTP-Method): `GET`\
-Returns:\
+For example, calling the webservice with URL `http://api.openweathermap.org/data/2.5/weather?q=Potsdam&APPID=d0b8dcaef9210ab1d713f44a3bcf589c` and HTTP metod `GET` returns the following JSON:
 `{"coord":{"lon":13.07,"lat":52.4},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"stations","main":{"temp":280.15,"pressure":1017,"humidity":65,"temp_min":280.15,"temp_max":280.15},"visibility":10000,"wind":{"speed":5.7,"deg":260},"clouds":{"all":40},"dt":1458406200,"sys":{"type":1,"id":4892,"message":0.0329,"country":"DE","sunrise":1469589694,"sunset":1469646353},"id":2852458,"name":"Potsdam","cod":200}`
 
-##### []{#Event_Integration_9}Event Integration
+## Event Integration
 
 Events are modelled in Gryphon with BPMN Message Receive Events or
 Message Receive Tasks. Similar to webservice tasks you can specify the
@@ -91,7 +92,7 @@ thesis](https://bpt.hpi.uni-potsdam.de/foswiki/pub/FCM/CMPublications/Bachelorar
 of Jonas Beyer. Example: Event-Query for Unicorn:
 `SELECT * FROM TemperatureEvent WHERE Temperature > 20.0`
 
-##### []{#Saving_External_Attribute_Values_15}Saving External Attribute Values
+#### Saving External Attribute Values
 
 Events and webservice tasks can return data. In order to incorporate
 this data into the case data objects, you can specify certain attributes
@@ -112,7 +113,7 @@ JSON Path for `TemperatureValue`: `$.main.temp`\
 This results in the value `280.15` being saved into the
 `TemperatureValue` attribute.
 
-#### []{#History_and_Logging_24}History and Logging
+## History and Logging
 
 In order to provide information about the case history or analyse it
 later on the history rest service can be used. All requests go to the
@@ -124,7 +125,7 @@ Chimera are:
 -   Change of state of data objects
 -   Change of value of a data attribute
 
-##### []{#Chimera_log_format_32}Chimera log format
+### Chimera log format
 
 At `history/v2/scenario/{scenarioId}/instance/{scenarioInstanceId` all
 of these transitions for a specific scenario instance can be accessed.
@@ -170,7 +171,7 @@ the id of the data object is 234. The new transitions added would be.
 At creation of each of one on the above mentioned logged entities there
 is a initial transition where the old value is set to `NULL`.
 
-##### []{#XES_support_70}XES support
+### XES support
 
 To support analysis of case models via the well known [PROM
 tool](http://www.promtools.org/doku.php) there is the possibility to
