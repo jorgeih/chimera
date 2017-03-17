@@ -38,4 +38,4 @@ For this you need the [Gryphon Case Modeler](https://github.com/bptlab/gryphon) 
 
 See the [pdf documentation](https://github.com/bptlab/chimera/raw/dev/docu/rest/JEngine_REST_Specs.pdf) inside the docu folder or refer to the [swagger files](https://github.com/bptlab/chimera/raw/dev/docu/rest/swagger.json).
 
-
+{% include howto_enactment.md %}
