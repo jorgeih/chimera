@@ -27,7 +27,10 @@ If there is a data input to a given activity, the user can select which
 of the currently active data objects should be used as input, and
 operated on.
 
-Your browser does not support HTML video.
+<video width="550" autoplay loop muted>
+    <source src="{{ site.github.url }}/vid/begin_activity.webm" type="video/webm">
+    Your browser does not support HTML video.
+</video>
 
 Open tasks can be terminated by clicking the check button. Once a task
 is terminated, its outgoing control flow will be enabled. The engine
@@ -37,7 +40,10 @@ tasks in the “Unassigned Tasks” panel.
 Upon terminating a task, the user can select the states of the outgoing
 data objects, if an activity has multiple output sets.
 
-Your browser does not support HTML video.
+<video width="550" autoplay loop muted>
+    <source src="{{ site.github.url }}/vid/terminate_activity.webm" type="video/webm">
+    Your browser does not support HTML video.
+</video>
 
 The Chimera case overview page provides different information about the
 current state of the case:
@@ -58,8 +64,11 @@ current state of the case:
 
 #### Execution Screencast
 
-A full screencast can be found
-[here](https://bpt.hpi.uni-potsdam.de/Chimera/WebHome).
+<video width="550" controls>
+    <source src="{{ site.github.url }}/vid/screencast.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+</video>
+The screencast can also be downloaded from [here](https://bpt.hpi.uni-potsdam.de/Chimera/WebHome) if your browser does not support mp4.
 
 ## Automatic Tasks
 
