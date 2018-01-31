@@ -41,3 +41,5 @@ See the [pdf documentation](https://github.com/bptlab/chimera/raw/dev/docu/rest/
 {% include howto_enactment.md %}
 
 {% include features.md %}
+
+{% include troubleshooting.md %}
