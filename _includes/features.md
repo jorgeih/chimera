@@ -7,7 +7,10 @@ This section briefly describes the features of the Chimera case engine.
 Process variables are used to refer to the values of data object attributes. The basic form for process variables is `#DataClassName.attributeName`, where `DataClassName` is the name of a defined data class and `attributeName` is the name of an attribute of that class.
 They can be used in several locations in the process fragment:
 - on outgoing sequence flow arcs of exclusive gateways (XOR split) to specify conditions, e.g. `#User.age > 17`
-- in webservice tasks to make calls depending on case data, e.g. use `https://www.reisewarnung.net/api?country=#Request.countryCode` as URI for the call (after the user entered the country code in a previous task)
+- in webservice tasks to make calls depending on case data, e.g. 
+  * use `https://www.reisewarnung.net/api?country=#Request.countryCode` as URI for the call (after the user entered the country code in a previous task)
+  * use `{ "title":"#Post.title", "message": "#Post.message" }` as Post Body
+    > Hint: Don't forget the `"` around the process variables and don't use spaces in your data object names
 - in email tasks to include user-specific text and address the email, e.g. using `#User.emailAddress` as recipient for the email
 - in the JsonPath expressions used to fill attributes of data objects, e.g. to retrieve either the German or English message of travel information you could use `$.data.lang.#Request.userLang.advice` as JsonPath expression of the `message` attribute
 
